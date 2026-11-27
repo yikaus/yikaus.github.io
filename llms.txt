@@ -30,6 +30,12 @@
 - *Set of Guardrails. Many Ways.* (LinkedIn, Jul 2026): https://www.linkedin.com/posts/kevinyi_codex-claude-activity-7485187896912670723-FI2A
 - *ToyOps, FunOps, FailOps* (Medium): https://medium.com/@yikaus
 
+## Certifications
+- **Akamai Web Performance Administrator** — Akamai Technologies (Apr 2017)
+- **Microsoft Certified Professional** — Microsoft (Nov 2014)
+- **AWS Certified Solutions Architect** — Amazon Web Services (AWS) (Aug 2014)
+- **Sun Certified Java 2 Programmer** — Sun Microsystems (Mar 2001)
+
 ## Socials
 - LinkedIn: https://www.linkedin.com/in/kevinyi/
 - GitHub: https://github.com/yikaus
