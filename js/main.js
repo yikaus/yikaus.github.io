@@ -1,128 +1,139 @@
-window.onload = function() {
+(function () {
+  var root = document.documentElement;
 
-    var $menuIcon = document.getElementsByClassName('menu-icon')[0],
-        $offCanva = document.getElementsByClassName('off-canvas')[0],
-        $siteWrap = document.getElementsByClassName('site-wrapper')[0];
-
-
-    if($menuIcon) {
-        $menuIcon.addEventListener('click', function() {
-            toggleClass($menuIcon, 'close');
-            toggleClass($offCanva, 'toggled');
-            toggleClass($siteWrap, 'open');
-        }, false);
-
-        $menuIcon.addEventListener('mouseenter', function() {
-            addClass($menuIcon, 'hover');
-        });
-
-        $menuIcon.addEventListener('mouseleave', function() {
-            removeClass($menuIcon, 'hover');
-        });
-    }   
-    
-    function addClass(element, className) {
-        element.className += " " + className;
-    }
-
-    function removeClass(element, className) {
-        // Capture any surrounding space characters to prevent repeated
-        // additions and removals from leaving lots of spaces.
-        var classNameRegEx = new RegExp("\\s*" + className + "\\s*");
-        element.className = element.className.replace(classNameRegEx, " ");
-    }
-
-    function toggleClass(element, className) {
-        if (!element || !className) {
-            return;
-        }
-
-        if (element.className.indexOf(className) === -1) {
-            addClass(element, className);
-        } else {
-            removeClass(element, className);
-        }
-    }
-
-
-    // With options
-    let b = baffle('.baffle', {
-        characters: '<$ДГФѾЛѮС▒░/',
-        speed: 75
-    });
-
-    b.reveal(1500);
-      
-    // scroll reveal https://github.com/jlmakes/scrollreveal
-    window.sr = ScrollReveal();
-    sr.reveal('.posts li', {
-        container: '.site-wrapper', 
-        reset: true,
-        mobile: true,
-        easing: 'ease-in-out',
-        scale: 1, 
-        duration: 900,
-        delay: 0,
-        distance: '0px'
-    });
-
-    //smooth-scrollbar
-    var setScrollbar = function(){
-        scrollbar = Scrollbar.init(document.getElementById('full-wrapper'), {
-            speed: 1.0,
-            damping: 0.1,
-            overscrollDamping: 0.2,
-            thumbMinSize: 20,
-            renderByPixels: true,
-            alwaysShowTracks: false,
-            continuousScrolling: 'auto',
-            overscrollEffect: 'bounce',
-            overscrollEffectColor: '#000'
-        });
+  // Theme toggle
+  var themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    var syncThemeButton = function () {
+      var current = root.getAttribute('data-theme') || 'dark';
+      var isLight = current === 'light';
+      themeBtn.setAttribute('aria-pressed', String(isLight));
+      themeBtn.setAttribute(
+        'aria-label',
+        isLight ? 'Switch to dark theme' : 'Switch to light theme'
+      );
     };
 
-    if($(window).width() >= 1025){
-        if(document.getElementById('full-wrapper')){
-            setScrollbar();     
-        }
-    }
-    else{
-        $('.full-wrapper').css({'overflow-y':'scroll', '-webkit-overflow-scrolling':'touch', 'overflow-x':'hidden'});
-    }
+    syncThemeButton();
 
-    window.onresize = function(event) {
-        if($(window).width() < 1025 && Scrollbar.has(document.getElementById('full-wrapper'))){
-            scrollbar.destroy();
-            $('.full-wrapper').css({'overflow-y':'scroll', '-webkit-overflow-scrolling':'touch', 'overflow-x':'hidden'});
-        }
-        if($(window).width() >= 1025 && !(Scrollbar.has(document.getElementById('full-wrapper')))){
-            if(document.getElementById('full-wrapper')){
-                setScrollbar();     
-            }
-        }
+    themeBtn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme') || 'dark';
+      var next = current === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {
+        // Ignore storage restrictions
+      }
+      syncThemeButton();
+    });
+  }
+
+  // Mobile navigation toggle
+  var menuBtn = document.getElementById('menu-toggle');
+  var nav = document.getElementById('site-nav');
+  if (menuBtn && nav) {
+    var closeMenu = function () {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
     };
 
-    // Open Twitter/share in a Pop-Up
-    var $popup = document.getElementsByClassName('popup')[0];
-    if (!$popup) {
-        return;
-    }
-    $popup.addEventListener('click', function(e) {
-        e.preventDefault()
-        var width  = 575,
-            height = 400,
-            left   = (document.documentElement.clientWidth  - width)  / 2,
-            top    = (document.documentElement.clientHeight - height) / 2,
-            url    = this.href,
-            opts   = 'status=1' +
-                     ',width='  + width  +
-                     ',height=' + height +
-                     ',top='    + top    +
-                     ',left='   + left;
-
-        window.open(url, 'twitter', opts);
-
-        return false;
+    menuBtn.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
-}
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu();
+        menuBtn.focus();
+      }
+    });
+  }
+
+  // Copy YAML snippet
+  var copyBtn = document.getElementById('copy-yaml');
+  var rawYamlEl = document.getElementById('raw-yaml');
+  if (copyBtn && rawYamlEl) {
+    var defaultLabel = copyBtn.textContent;
+    var resetTimer = null;
+
+    var markCopied = function () {
+      copyBtn.textContent = 'Copied!';
+      copyBtn.classList.add('copied');
+      if (resetTimer) clearTimeout(resetTimer);
+      resetTimer = setTimeout(function () {
+        copyBtn.textContent = defaultLabel;
+        copyBtn.classList.remove('copied');
+      }, 2000);
+    };
+
+    copyBtn.addEventListener('click', function () {
+      var text = rawYamlEl.textContent.trim() + '\n';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(markCopied)
+          .catch(function () {
+            fallbackCopy(text);
+          });
+      } else {
+        fallbackCopy(text);
+      }
+    });
+
+    function fallbackCopy(text) {
+      var textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        markCopied();
+      } catch (e) {
+        // Ignore copy failure
+      }
+      document.body.removeChild(textarea);
+    }
+  }
+
+  // Project category filters
+  var filterButtons = document.querySelectorAll('[data-filter]');
+  var projectCards = document.querySelectorAll('.project-card[data-category]');
+  if (filterButtons.length && projectCards.length) {
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(function (other) {
+          var active = other === btn;
+          other.classList.toggle('active', active);
+          other.setAttribute('aria-pressed', String(active));
+        });
+
+        projectCards.forEach(function (card) {
+          var category = card.getAttribute('data-category');
+          var visible = filter === 'all' || category === filter;
+          card.hidden = !visible;
+        });
+      });
+    });
+  }
+
+  // Graceful avatar fallback
+  var avatarImg = document.getElementById('avatar-img');
+  var avatarFallback = document.getElementById('avatar-fallback');
+  if (avatarImg && avatarFallback) {
+    avatarImg.addEventListener('error', function () {
+      avatarImg.style.display = 'none';
+      avatarFallback.hidden = false;
+    });
+  }
+})();

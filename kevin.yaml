@@ -1,0 +1,28 @@
+---
+name: Kevin Yi
+handle: yikaus
+role: Principal Engineer & DevOps Lead
+company: NAB
+location: Melbourne, Australia
+journey:
+  - Programmer
+  - SysAdmin
+  - Middleware SME
+  - Father
+  - DevOps
+  - Principal Engineer
+focus:
+  - Cloud Platforms (AWS, GCP, Cloudflare)
+  - Platform Engineering & CI/CD
+  - Agentic AI & Intelligence Economics
+interests:
+  - Tech
+  - NBA
+  - F1
+  - ToyOps / ESP32
+motto: "Set of guardrails. Many ways."
+socials:
+  linkedin: https://www.linkedin.com/in/kevinyi/
+  github: https://github.com/yikaus
+  medium: https://medium.com/@yikaus
+  x: https://x.com/yikaus

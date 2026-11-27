@@ -1,99 +1,55 @@
 <!DOCTYPE html>
-
-
-
- <html class="no-js"> 
+<html lang="en" data-theme="dark">
 <head>
-    <title>404 Page not found </title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-language" content="en-us" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Kevin Yi">
-    <meta name="description" content="Devops">
-    <meta name="generator" content="Hugo 0.41" />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://yikaus.github.io/css/smooth-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="https://yikaus.github.io/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css" />
-    
-
-    <style>
-        .posts li {
-            visibility: hidden;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Page Not Found | Kevin Yi (@yikaus)</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
         }
-    </style> 
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
-    <div class="off-canvas">
-    <figure class="avatar">
-        <img src="https://yikaus.github.io/img/Gender Neutral User-80.svg" title="Kevin Yi">
-    </figure>
-    <div class="bio">
-        
-        <h1>Kevin Yi</h1>
-        
-        
-        <p>DevOps</p>
-        
-        
-        <p class="bio2">MelBourne,Australia</p>
-        
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-prompt" aria-hidden="true">&gt;_</span>
+        <span>yikaus.github.io</span>
+      </a>
     </div>
-    <nav>
+  </header>
 
-        
-
-        
-
-        <ul>
-        
-        </ul>
-
-        
-
-        
-    </nav>
-</div>
-
-
-    <div class="site-wrapper">
-        <header>
-	<div class="h-wrap">
-		
-		
-		
-	</div>
-</header>
-
-        
-        <section class="single-wrap">
-            <article class="single-content">
-                <h1 class="page-title" itemprop="name headline">Page not found</h1>
-                <h3 style="text-align: center;">The requested page was not <br> found on the server.</h3>
-			</article>
-		</section>
-
-        <footer>
-	
-</footer>
+  <main class="not-found">
+    <div class="not-found-card">
+      <div class="yaml-card">
+        <div class="yaml-bar">
+          <div class="yaml-title-group">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="yaml-filename">error.yaml</span>
+          </div>
+        </div>
+        <pre class="yaml-body"><code><span class="y-doc">---</span>
+<span class="y-key">status</span>: <span class="y-val">404</span>
+<span class="y-key">message</span>: <span class="y-str">"Page not found"</span>
+<span class="y-key">home</span>: <span class="y-val">https://yikaus.github.io/</span></code></pre>
+      </div>
+      <a class="btn-primary" href="/">&larr; Back to home</a>
     </div>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://yikaus.github.io/js/scrollreveal.min.js"></script>
-<script type='application/javascript' src='https://yikaus.github.io/js/smooth-scrollbar.js'></script>
-<script src="https://yikaus.github.io/js/baffle.min.js"></script>
-<script src="https://yikaus.github.io/js/main.js"></script>
-
-
-
-
-
-<!-- Syntax highlighting -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-    
+  </main>
 </body>
 </html>

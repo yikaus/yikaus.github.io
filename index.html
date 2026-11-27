@@ -1,152 +1,560 @@
 <!DOCTYPE html>
-
-
-
- <html class="no-js"> 
+<html lang="en" data-theme="dark">
 <head>
-    <title>Kevin Yi </title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-language" content="en-us" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Kevin Yi">
-    <meta name="description" content="Devops">
-    <meta name="generator" content="Hugo 0.41" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Yi (@yikaus) — Principal Engineer &amp; DevOps Lead</title>
+  <meta name="description" content="Kevin Yi — Principal Engineer and DevOps Lead at NAB in Melbourne, Australia. Building secure, automated cloud platforms and exploring agentic AI engineering.">
+  <meta name="author" content="Kevin Yi">
+  <link rel="canonical" href="https://yikaus.github.io/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://yikaus.github.io/css/smooth-scrollbar.css" />
-    <link rel="stylesheet" type="text/css" href="https://yikaus.github.io/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css" />
-    
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kevin Yi (@yikaus) — Principal Engineer &amp; DevOps Lead">
+  <meta property="og:description" content="Principal Engineer and DevOps Lead at NAB in Melbourne, building secure, automated cloud platforms and exploring agentic AI economics.">
+  <meta property="og:url" content="https://yikaus.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/4230760?v=4">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kevin Yi (@yikaus)">
+  <meta name="twitter:description" content="Principal Engineer and DevOps Lead at NAB in Melbourne, Australia.">
 
-    <style>
-        .posts li {
-            visibility: hidden;
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
         }
-    </style> 
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Yi",
+    "alternateName": "yikaus",
+    "url": "https://yikaus.github.io/",
+    "image": "https://avatars.githubusercontent.com/u/4230760?v=4",
+    "jobTitle": "Principal Engineer & DevOps Lead",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "NAB"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "AU"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/kevinyi/",
+      "https://github.com/yikaus",
+      "https://medium.com/@yikaus",
+      "https://x.com/yikaus"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-prompt" aria-hidden="true">&gt;_</span>
+        <span>yikaus.github.io</span>
+      </a>
 
-    <div class="off-canvas">
-    <figure class="avatar">
-        <img src="https://yikaus.github.io/img/Gender Neutral User-80.svg" title="Kevin Yi">
-    </figure>
-    <div class="bio">
-        
-        <h1>Kevin Yi</h1>
-        
-        
-        <p>DevOps</p>
-        
-        
-        <p class="bio2">MelBourne,Australia</p>
-        
+      <div class="nav-wrap">
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#focus">Focus</a>
+          <a href="#projects">Projects</a>
+          <a href="#writing">Writing</a>
+          <a href="#stack">Stack</a>
+        </nav>
+
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
     </div>
-    <nav>
+  </header>
 
-        
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Melbourne, Australia · Principal Engineer &amp; DevOps Lead @ NAB</span>
+          </div>
 
-        
+          <div class="hero-identity">
+            <div class="avatar-wrap">
+              <img class="avatar-img" id="avatar-img" src="https://avatars.githubusercontent.com/u/4230760?v=4" alt="Kevin Yi" width="68" height="68">
+              <span class="avatar-fallback" id="avatar-fallback" hidden>KY</span>
+            </div>
+            <div>
+              <h1 class="hero-title">Kevin Yi</h1>
+              <div class="hero-handle">@yikaus · Building cloud platforms &amp; agentic tools</div>
+            </div>
+          </div>
 
-        <ul>
-        
-        </ul>
+          <p class="hero-lead">
+            <strong>Principal Engineer and DevOps Lead at NAB</strong>, building secure, automated cloud platforms and exploring how agentic AI reshapes enterprise engineering and operations.
+          </p>
 
-        
+          <div class="journey-line">
+            Programmer &rarr; SysAdmin &rarr; Middleware SME &rarr; Father &rarr; DevOps &rarr; Principal Engineer
+          </div>
 
-        
-    </nav>
-</div>
+          <div class="social-row">
+            <a class="social-pill" href="https://www.linkedin.com/in/kevinyi/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a class="social-pill" href="https://github.com/yikaus" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="social-pill" href="https://medium.com/@yikaus" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32H21v.319l-1.515 1.451a.45.45 0 0 0-.168.425v10.66a.448.448 0 0 0 .168.425l1.479 1.451v.319h-7.436v-.319l1.529-1.487c.152-.15.152-.195.152-.425V8.401l-4.25 10.78h-.573L5.437 8.401v7.249a.99.99 0 0 0 .272.83l1.99 2.415v.319H2.05v-.319l1.99-2.415a.96.96 0 0 0 .245-.83V7.269z"/></svg>
+              <span>Medium</span>
+            </a>
+            <a class="social-pill" href="https://x.com/yikaus" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>X</span>
+            </a>
+          </div>
+        </div>
 
+        <aside class="yaml-card" aria-label="YAML profile card">
+          <div class="yaml-bar">
+            <div class="yaml-title-group">
+              <div class="window-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="yaml-filename">kevin.yaml</span>
+            </div>
+            <div class="yaml-actions">
+              <button class="yaml-btn" id="copy-yaml" type="button">Copy</button>
+              <a class="yaml-btn" href="/kevin.yaml" target="_blank" rel="noopener noreferrer">Raw</a>
+            </div>
+          </div>
+          <pre class="yaml-body"><code><span class="y-doc">---</span>
+<span class="y-key">name</span>: <span class="y-val">Kevin Yi</span>
+<span class="y-key">handle</span>: <span class="y-val">yikaus</span>
+<span class="y-key">role</span>: <span class="y-val">Principal Engineer &amp; DevOps Lead</span>
+<span class="y-key">company</span>: <span class="y-val">NAB</span>
+<span class="y-key">location</span>: <span class="y-val">Melbourne, Australia</span>
+<span class="y-key">focus</span>:
+  <span class="y-dash">-</span> <span class="y-val">Cloud Platforms (AWS, GCP, Cloudflare)</span>
+  <span class="y-dash">-</span> <span class="y-val">Platform Engineering &amp; CI/CD</span>
+  <span class="y-dash">-</span> <span class="y-val">Agentic AI &amp; Intelligence Economics</span>
+<span class="y-key">interests</span>:
+  <span class="y-dash">-</span> <span class="y-val">Tech</span>
+  <span class="y-dash">-</span> <span class="y-val">NBA</span>
+  <span class="y-dash">-</span> <span class="y-val">F1</span>
+  <span class="y-dash">-</span> <span class="y-val">ToyOps / ESP32</span>
+<span class="y-key">motto</span>: <span class="y-str">"Set of guardrails. Many ways."</span></code></pre>
+        </aside>
+      </div>
+    </section>
 
-    <a class="menu-icon" title="Menu"><span class="lines"></span></a>
+    <section class="section" id="focus">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">01 / Focus</span>
+            <h2 class="section-title">What I Work On</h2>
+            <p class="section-sub">Connecting enterprise cloud architecture, developer platforms, and practical agentic AI.</p>
+          </div>
+        </div>
 
-    <header>
-	<div class="h-wrap">
-		
-		
-		
-	</div>
-</header>
+        <div class="focus-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            </div>
+            <h3 class="card-title">Cloud &amp; Platform Engineering</h3>
+            <p class="card-text">Leading enterprise cloud migrations across GCP and AWS, building secure landing zones, and scaling internal developer platforms in regulated banking environments.</p>
+          </article>
 
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="card-title">DevOps &amp; CI/CD Strategy</h3>
+            <p class="card-text">Designing resilient delivery pipelines, infrastructure-as-code guardrails, and container/edge workflows — moving from rigid standardization to <em>“a set of guardrails, many ways.”</em></p>
+          </article>
 
-    <div class="site-wrapper">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3 class="card-title">Agentic AI &amp; Economics</h3>
+            <p class="card-text">Modeling the real cost and operational impact of enterprise AI adoption (L1 assistants to L4 agentic systems) and experimenting with terminal-native, agent-first workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <main>
-    <div id="home">
-        <ul class="posts">
-            <li>
-            <div class="p-wrap"><a href="#">---</a></div>
-            </li>
-            <li>
-                <a href="#" onclick="">
-                    <div class="p-wrap" onclick="">
-                        - <span class="p-attr">name</span>: <span class="class-attr">KEVIN YI</span><br>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">02 / Projects</span>
+            <h2 class="section-title">Selected Builds</h2>
+            <p class="section-sub">Recent AI &amp; edge experiments alongside open-source DevOps tools.</p>
+          </div>
 
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="p-wrap" onclick="">
-                        - <span class="p-attr">socials</span>: <br>
-                        &nbsp;&nbsp;  <span class="p-attr">github</span>: <span class="class-attr">yikaus</span><br>
-                        &nbsp;&nbsp;  <span class="p-attr">twitter</span>: <span class="class-attr">yikaus</span><br>
-                        &nbsp;&nbsp;  <span class="p-attr">linkedin</span>: <span class="class-attr">kevinyi</span><br>
+          <div class="filter-bar" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="ai-edge" aria-pressed="false">AI &amp; Edge</button>
+            <button class="filter-btn" type="button" data-filter="devops" aria-pressed="false">DevOps &amp; Cloud</button>
+            <button class="filter-btn" type="button" data-filter="maker" aria-pressed="false">Maker</button>
+          </div>
+        </div>
 
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="p-wrap" onclick="">
-                        - <span class="p-attr">aboutme</span>: |<br>
-                        &nbsp; &nbsp;  <span class="class-attr">Programer->Systemadmin->MiddlewareSME->Father->Devops</span><br>
-                        &nbsp; &nbsp; <span class="class-attr">Tech /NBA /F1 fans</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="p-wrap" onclick="">
-                        - <span class="p-attr">skills</span>: <br>
-                        &nbsp;&nbsp;  <span class="p-attr">prefer</span>: <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">AWS</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">Python</span><br>
-                        &nbsp;&nbsp;  <span class="p-attr">netual</span>: <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">GCP</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">Ruby</span><br>
-                        &nbsp;&nbsp;  <span class="p-attr">hate</span>: <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">AZure</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;- <span class="class-attr">Powershell</span><br>
+        <div class="projects-grid">
+          <article class="card project-card" data-category="ai-edge">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">Intelligence Economics (aitco)</h3>
+                <span class="badge badge-featured">Featured · 2026</span>
+              </div>
+              <p class="project-desc">
+                Enterprise agentic AI TCO &amp; 5-year forecast simulator exploring the "Inference Paradox" — with deterministic TypeScript modeling, WebMCP browser tools, <code>llms.txt</code>, and a Cloudflare Workers API.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">React / Vite</span>
+                <span class="tech-pill">WebMCP</span>
+                <span class="tech-pill">Cloudflare Workers</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://yikaus.github.io/aitco/" target="_blank" rel="noopener noreferrer">Live App &rarr;</a>
+              <a class="project-link" href="https://github.com/yikaus/aitco" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            </div>
+          </article>
 
-                    </div>
-                </a>
-            </li>
-        </ul>
+          <article class="card project-card" data-category="ai-edge">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">MiniSocial (minit)</h3>
+                <span class="badge badge-meta">2026</span>
+              </div>
+              <p class="project-desc">
+                Mobile-first microblog hosted on a single Cloudflare Worker combining React/Vite static assets, Hono API, Better Auth on D1, R2 media storage, KV caching, and Queue-driven notifications.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">Cloudflare Workers</span>
+                <span class="tech-pill">Hono</span>
+                <span class="tech-pill">D1 / R2 / KV</span>
+                <span class="tech-pill">TypeScript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://minisocial.yikaus.workers.dev" target="_blank" rel="noopener noreferrer">Live App &rarr;</a>
+              <a class="project-link" href="https://github.com/yikaus/minit" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-category="ai-edge">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">Network Fingerprint</h3>
+                <span class="badge badge-meta">2026</span>
+              </div>
+              <p class="project-desc">
+                Lightweight Cloudflare Worker application that transforms a visitor's public IP and local browser ID into downloadable generative SVG fingerprint artwork with zero server-side tracking.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">Cloudflare Workers</span>
+                <span class="tech-pill">Generative SVG</span>
+                <span class="tech-pill">Vanilla JS</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/yikaus/network-fingerprint" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-category="devops">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">k3s-cicd</h3>
+                <span class="badge badge-meta">&#9733; 20</span>
+              </div>
+              <p class="project-desc">
+                Local self-hosted CI/CD environment running Drone CI and Gitea on a lightweight Kubernetes (<code>k3d</code> / <code>k3s</code>) cluster for fast end-to-end pipeline experimentation.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">Kubernetes / k3s</span>
+                <span class="tech-pill">Drone CI</span>
+                <span class="tech-pill">Gitea</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/yikaus/k3s-cicd" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-category="devops">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">Cloud &amp; Container Toolkit</h3>
+                <span class="badge badge-meta">&#9733; 34 / 25 / 13</span>
+              </div>
+              <p class="project-desc">
+                Open-source DevOps and infrastructure utilities: <code>docker-alpine-bash</code> (&#9733;34), <code>vultrcli</code> Python CLI (&#9733;25), and <code>hashistack</code> (&#9733;13) for bootstrapping Consul, Nomad, and Vault on AWS.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">HashiCorp Stack</span>
+                <span class="tech-pill">AWS</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/yikaus/docker-alpine-bash" target="_blank" rel="noopener noreferrer">docker-alpine-bash &rarr;</a>
+              <a class="project-link" href="https://github.com/yikaus/vultrcli" target="_blank" rel="noopener noreferrer">vultrcli &rarr;</a>
+              <a class="project-link" href="https://github.com/yikaus/hashistack" target="_blank" rel="noopener noreferrer">hashistack &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-category="maker">
+            <div>
+              <div class="project-top">
+                <h3 class="project-name">kmart-at (ToyOps)</h3>
+                <span class="badge badge-meta">ESP32 · Hardware</span>
+              </div>
+              <p class="project-desc">
+                Modifying a toy into a PS3 Bluetooth-controlled ESP32 robot — part of the <em>ToyOps, FunOps, FailOps</em> hardware tinkering series blending embedded C++ with playful experimentation.
+              </p>
+              <div class="pill-list">
+                <span class="tech-pill">ESP32</span>
+                <span class="tech-pill">C++</span>
+                <span class="tech-pill">Bluetooth</span>
+                <span class="tech-pill">ToyOps</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/yikaus/kmart-at" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+              <a class="project-link" href="https://medium.com/@yikaus" target="_blank" rel="noopener noreferrer">Medium &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">03 / Writing</span>
+            <h2 class="section-title">Notes &amp; Articles</h2>
+            <p class="section-sub">Thoughts on the evolution of DevOps, enterprise AI economics, and hands-on building.</p>
+          </div>
+        </div>
+
+        <div class="writing-list">
+          <a class="writing-item" href="https://www.linkedin.com/pulse/i-watched-devops-become-profession-now-might-watch-disappear-kevin-yi-zojkc" target="_blank" rel="noopener noreferrer">
+            <div class="writing-meta">
+              <span class="writing-pub">LinkedIn Article</span>
+              <span>Nov 2026</span>
+            </div>
+            <div>
+              <h3 class="writing-title">I Watched DevOps Become a Profession. Now I Might Watch It Disappear</h3>
+              <p class="writing-summary">Reflecting on a decade-plus DevOps journey and how AI-native workflows reshape engineering roles.</p>
+            </div>
+            <span class="writing-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+
+          <a class="writing-item" href="https://www.linkedin.com/posts/kevinyi_intelligence-economics-enterprise-ai-cost-activity-7531926042089803776-NiKp" target="_blank" rel="noopener noreferrer">
+            <div class="writing-meta">
+              <span class="writing-pub">LinkedIn</span>
+              <span>Nov 2026</span>
+            </div>
+            <div>
+              <h3 class="writing-title">AI Token Prices Could Drop 90% — But Your Enterprise AI Bill Could Grow 10x in Five Years</h3>
+              <p class="writing-summary">Exploring Gartner's "Inference Paradox" as enterprises scale from L1 assistants to L3/L4 agentic systems.</p>
+            </div>
+            <span class="writing-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+
+          <a class="writing-item" href="https://www.linkedin.com/posts/kevinyi_vibecoding-piagent-superlogical-activity-7531124675326812160-pqL7" target="_blank" rel="noopener noreferrer">
+            <div class="writing-meta">
+              <span class="writing-pub">LinkedIn</span>
+              <span>Nov 2026</span>
+            </div>
+            <div>
+              <h3 class="writing-title">Pi + Rex + Terminal Browser + Cloudflare</h3>
+              <p class="writing-summary">Coding, browsing, testing, and deploying without ever leaving the code agent in the terminal.</p>
+            </div>
+            <span class="writing-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+
+          <a class="writing-item" href="https://www.linkedin.com/posts/kevinyi_codex-claude-activity-7485187896912670723-FI2A" target="_blank" rel="noopener noreferrer">
+            <div class="writing-meta">
+              <span class="writing-pub">LinkedIn</span>
+              <span>Jul 2026</span>
+            </div>
+            <div>
+              <h3 class="writing-title">Set of Guardrails. Many Ways.</h3>
+              <p class="writing-summary">Why AI coding agents shift architecture governance from "one framework, one way" to clear guardrails.</p>
+            </div>
+            <span class="writing-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+
+          <a class="writing-item" href="https://medium.com/@yikaus" target="_blank" rel="noopener noreferrer">
+            <div class="writing-meta">
+              <span class="writing-pub">Medium</span>
+              <span>Archive</span>
+            </div>
+            <div>
+              <h3 class="writing-title">ToyOps, FunOps, FailOps</h3>
+              <p class="writing-summary">Hands-on posts covering automation, containers, and turning inexpensive hardware into ESP32 robots.</p>
+            </div>
+            <span class="writing-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">04 / Stack &amp; Credentials</span>
+            <h2 class="section-title">Toolbox &amp; Certifications</h2>
+          </div>
+        </div>
+
+        <div class="stack-grid">
+          <div class="card">
+            <h3 class="stack-title">Cloud &amp; Edge</h3>
+            <div class="pill-list">
+              <span class="tech-pill">AWS</span>
+              <span class="tech-pill">GCP</span>
+              <span class="tech-pill">Cloudflare Workers</span>
+              <span class="tech-pill">D1 / R2 / KV</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="stack-title">Platform &amp; DevOps</h3>
+            <div class="pill-list">
+              <span class="tech-pill">Kubernetes / k3s</span>
+              <span class="tech-pill">Docker</span>
+              <span class="tech-pill">Terraform / IaC</span>
+              <span class="tech-pill">CI/CD &amp; GitOps</span>
+              <span class="tech-pill">HashiCorp (Consul · Nomad · Vault)</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="stack-title">Languages &amp; AI</h3>
+            <div class="pill-list">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Shell</span>
+              <span class="tech-pill">WebMCP</span>
+              <span class="tech-pill">Agentic Workflows</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="stack-title">Certifications</h3>
+            <ul class="cert-list">
+              <li class="cert-item">
+                <span class="cert-name">Akamai Web Performance Administrator</span>
+                <span class="cert-issuer">Akamai Technologies · Apr 2017</span>
+              </li>
+              <li class="cert-item">
+                <span class="cert-name">Microsoft Certified Professional</span>
+                <span class="cert-issuer">Microsoft · Nov 2014</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Kevin Yi &middot; Melbourne, Australia</span>
+      <div class="footer-links">
+        <a href="https://github.com/yikaus" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/kevinyi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://medium.com/@yikaus" target="_blank" rel="noopener noreferrer">Medium</a>
+        <a href="https://x.com/yikaus" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="/kevin.yaml" target="_blank" rel="noopener noreferrer">kevin.yaml</a>
+        <a href="/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt</a>
+      </div>
     </div>
-</main>
+  </footer>
 
-        
-
-        <footer>
-	
-</footer>
-    </div>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://yikaus.github.io/js/scrollreveal.min.js"></script>
-<script type='application/javascript' src='https://yikaus.github.io/js/smooth-scrollbar.js'></script>
-<script src="https://yikaus.github.io/js/baffle.min.js"></script>
-<script src="https://yikaus.github.io/js/main.js"></script>
-
-
-
-
-
-<!-- Syntax highlighting -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
+  <script type="text/plain" id="raw-yaml">---
+name: Kevin Yi
+handle: yikaus
+role: Principal Engineer & DevOps Lead
+company: NAB
+location: Melbourne, Australia
+journey:
+  - Programmer
+  - SysAdmin
+  - Middleware SME
+  - Father
+  - DevOps
+  - Principal Engineer
+focus:
+  - Cloud Platforms (AWS, GCP, Cloudflare)
+  - Platform Engineering & CI/CD
+  - Agentic AI & Intelligence Economics
+interests:
+  - Tech
+  - NBA
+  - F1
+  - ToyOps / ESP32
+motto: "Set of guardrails. Many ways."
+socials:
+  linkedin: https://www.linkedin.com/in/kevinyi/
+  github: https://github.com/yikaus
+  medium: https://medium.com/@yikaus
+  x: https://x.com/yikaus</script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

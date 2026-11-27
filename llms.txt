@@ -1,0 +1,37 @@
+# Kevin Yi (@yikaus)
+
+> Principal Engineer and DevOps Lead at NAB in Melbourne, Australia — building secure, automated cloud platforms and exploring how agentic AI reshapes enterprise engineering and operations.
+
+## Profile
+- **Name:** Kevin Yi
+- **Handle:** yikaus
+- **Role:** Principal Engineer & DevOps Lead at NAB
+- **Location:** Melbourne, Australia
+- **Motto:** Set of guardrails. Many ways.
+- **Machine-readable YAML:** https://yikaus.github.io/kevin.yaml
+
+## Focus Areas
+- **Cloud & Platform Engineering:** Enterprise cloud migrations (GCP & AWS), secure landing zones, and internal developer platforms at banking scale.
+- **DevOps & CI/CD Strategy:** Resilient delivery pipelines, infrastructure-as-code guardrails, and modern edge/container workflows.
+- **Agentic AI & Engineering Economics:** Modeling enterprise AI TCO (L1 assistants to L4 agentic systems) and terminal-native, agent-first workflows.
+
+## Featured Projects
+- **Intelligence Economics (`aitco`):** Enterprise agentic AI TCO & 5-year forecast simulator exploring the "Inference Paradox" (TypeScript, WebMCP, Cloudflare Workers). Live: https://yikaus.github.io/aitco/ | Repo: https://github.com/yikaus/aitco
+- **MiniSocial (`minit`):** Mobile-first microblog on one Cloudflare Worker (React/Vite, Hono, Better Auth on D1, R2, KV, Queues). Live: https://minisocial.yikaus.workers.dev | Repo: https://github.com/yikaus/minit
+- **Network Fingerprint:** Lightweight Cloudflare Worker generating downloadable SVG fingerprint art from visitor IP and local browser ID. Repo: https://github.com/yikaus/network-fingerprint
+- **k3s-cicd:** Local self-hosted CI/CD stack running Drone CI and Gitea on k3d/k3s. Repo: https://github.com/yikaus/k3s-cicd
+- **Cloud & Container Toolkit:** `docker-alpine-bash`, `vultrcli`, and `hashistack` (Consul/Nomad/Vault on AWS). Repos: https://github.com/yikaus
+- **kmart-at (ToyOps):** PS3 Bluetooth-controlled ESP32 robot. Repo: https://github.com/yikaus/kmart-at
+
+## Selected Writing
+- *I Watched DevOps Become a Profession. Now I Might Watch It Disappear* (LinkedIn Article, Nov 2026): https://www.linkedin.com/pulse/i-watched-devops-become-profession-now-might-watch-disappear-kevin-yi-zojkc
+- *AI Token Prices Could Drop 90% — But Your Enterprise AI Bill Could Grow 10x in Five Years* (LinkedIn, Nov 2026): https://www.linkedin.com/posts/kevinyi_intelligence-economics-enterprise-ai-cost-activity-7531926042089803776-NiKp
+- *Pi + Rex + Terminal Browser + Cloudflare* (LinkedIn, Nov 2026): https://www.linkedin.com/posts/kevinyi_vibecoding-piagent-superlogical-activity-7531124675326812160-pqL7
+- *Set of Guardrails. Many Ways.* (LinkedIn, Jul 2026): https://www.linkedin.com/posts/kevinyi_codex-claude-activity-7485187896912670723-FI2A
+- *ToyOps, FunOps, FailOps* (Medium): https://medium.com/@yikaus
+
+## Socials
+- LinkedIn: https://www.linkedin.com/in/kevinyi/
+- GitHub: https://github.com/yikaus
+- Medium: https://medium.com/@yikaus
+- X: https://x.com/yikaus
