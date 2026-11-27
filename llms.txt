@@ -18,9 +18,9 @@
 ## Featured Projects
 - **Intelligence Economics (`aitco`):** Enterprise agentic AI TCO & 5-year forecast simulator exploring the "Inference Paradox" (TypeScript, WebMCP, Cloudflare Workers). Live: https://yikaus.github.io/aitco/ | Repo: https://github.com/yikaus/aitco
 - **MiniSocial (`minit`):** Mobile-first microblog on one Cloudflare Worker (React/Vite, Hono, Better Auth on D1, R2, KV, Queues). Live: https://minisocial.yikaus.workers.dev | Repo: https://github.com/yikaus/minit
-- **Network Fingerprint:** Lightweight Cloudflare Worker generating downloadable SVG fingerprint art from visitor IP and local browser ID. Repo: https://github.com/yikaus/network-fingerprint
+- **HashiStack & Nomad Demo:** Bootstrapping Consul/Nomad/Vault on AWS (`hashistack`, https://github.com/yikaus/hashistack) and Docker service scheduling/discovery with Nomad, Consul, and HAProxy (`nomad-demo`, https://github.com/yikaus/nomad-demo).
 - **k3s-cicd:** Local self-hosted CI/CD stack running Drone CI and Gitea on k3d/k3s. Repo: https://github.com/yikaus/k3s-cicd
-- **Cloud & Container Toolkit:** `docker-alpine-bash`, `vultrcli`, and `hashistack` (Consul/Nomad/Vault on AWS). Repos: https://github.com/yikaus
+- **Cloud & Container Toolkit:** `docker-alpine-bash` and `vultrcli`. Repos: https://github.com/yikaus
 - **kmart-at (ToyOps):** PS3 Bluetooth-controlled ESP32 robot. Repo: https://github.com/yikaus/kmart-at
 
 ## Selected Writing
